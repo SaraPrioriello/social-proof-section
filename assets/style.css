@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+/* ========= Base (desktop-first, ma con fix utili ovunque) ========= */
+body {
+  background-image:
+    url("/assets/image/bg-pattern-top-desktop.svg"),
+    url("/assets/image/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, calc(100% - 50px) calc(100% + 100px);
+  font-size: 15px;
+  margin: 0;
+}
+
+h1 {
+  color: hsl(300, 43%, 22%);
+  font-size: 3.5em;
+  margin: 2em 2em 0 2em;
+  font-family: 'League Spartan', sans-serif;
+  text-align: left;
+  font-weight: 700;
+}
+
+.description {
+  color: hsl(303, 10%, 53%);
+  font-size: 1.2em;
+  font-weight: 500;
+  font-family: 'League Spartan', sans-serif;
+  text-align: left;
+  line-height: 1.3em;
+  margin: 1.5em 2em 2.5em 5.9em;
+}
+
+main {
+  margin-top: 0;
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 10px;
+  padding-bottom: 2em;
+  font-family: 'League Spartan', sans-serif;
+}
+
+h2 {
+  color: hsl(0, 0%, 100%);
+  font-size: 1em;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 500;
+  display: flex;
+  text-align: center;
+  gap: 1rem;
+}
+
+h3 {
+  color: hsl(333, 80%, 67%);
+  font-size: 0.9em;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  flex-wrap: wrap-reverse;
+  margin-top: -0.5em;
+  letter-spacing: 0.01em;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0 1em;
+}
+
+.review-header img {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  padding: 0;           /* tolgo padding che “schiaccia” l’avatar */
+  margin-left: -1em;
+  margin-bottom: 1em;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.rating {
+  font-size: 15px;
+  color: hsl(300, 24%, 96%);
+  margin-top: -0.5em;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.5em;
+  display: block;       /* via “inline + float” */
+  float: none;
+}
+
+.reviews {
+  display: inline-block;
+  height: 10em;
+  margin: 1em;
+  padding: 2em;
+  padding-bottom: 3em;
+  width: 80%;
+  max-width: 18em;
+  margin-bottom: 4em;
+}
+
+.colton { margin-left: 7em;  }
+.irene  {  margin: 0.9rem; position: relative; top: 2em; }
+.anne   {  margin: 0.9rem; position: relative; top: 4em; margin-bottom: 10em; }
+
+
+
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  align-items: start;
+  justify-self: end;
+}
+
+.rating-star-1,
+.rating-star-2,
+.rating-star-3 {
+  background-color: hsl(300, 24%, 96%);
+  font-weight: 700;
+  font-family: 'League Spartan', sans-serif;
+  color: hsl(300, 43%, 22%);
+  padding: 1em 0;
+  width: 25em;
+  text-align: center;
+}
+
+.last {
+    margin-right: 1em;
+}
+
+.rating-star-1 { margin-top: 9em; }
+.rating-star-2 { margin: 1em 0 1em 3em; }
+.rating-star-3 { margin: 1em 0 1em 6em; }
+
+.ratings {
+  margin-left: 2em;
+  width: 80%;
+}
+
+/* ========= Tablet (≤ 1024px) ========= */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.6em;
+    margin: 1.5em 1.5em 0.5em 1.5em;
+   
+  }
+
+  .description {
+    font-size: 1.1em;
+    margin: 1em 1.5em 2em 1.5em;
+  }
+
+  .top {
+    grid-template-columns: 1fr;   /* stack testo + ratings */
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .ratings {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .rating-star-1,
+  .rating-star-2,
+  .rating-star-3 {
+    width: 80%;
+    max-width: 36rem;
+    margin: 0.75rem auto;
+  }
+
+  .reviews {
+    width: 80%;
+    max-width: 32rem;
+    margin: 1rem auto;
+    align-items: center;
+  }
+
+  .colton,
+  .irene,
+  .anne {
+    top: auto;
+    margin: 1rem auto;
+    max-width: 32rem;
+    align-items: center;
+  }
+
+  body {
+    /* avvicino i pattern per evitare “tagli” su schermi medi */
+    background-position: left -50px, right -80px bottom -40px;
+    background-size: 300px, 300px;
+  }
+}
+
+
+
+/* ===== Responsive per schermi medi (fino a 800px) ===== */
+@media (max-width: 800px) {
+  body {
+    font-size: 14px;
+    background-position: left -60px top -60px, right -60px bottom -60px;
+    background-size: 260px, 260px;
+    background-image: url("/assets/image/bg-pattern-top-mobile.svg"),
+    url("/assets/image/bg-pattern-bottom-mobile.svg");
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin: 1.5rem 1rem 0.5rem;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 1.05rem;
+    margin: 1rem 1.5rem 2rem;
+    text-align: center;
+  }
+
+  .top {
+    grid-template-columns: 1fr;  /* testo sopra, rating sotto */
+    justify-items: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .ratings {
+    width: 100%;
+    max-width: 36rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .rating-star-1,
+  .rating-star-2,
+  .rating-star-3 {
+    width: 100%;
+    max-width: 34rem;
+    margin: 0.75rem auto;
+  }
+
+  .reviews,
+  .colton,
+  .irene,
+  .anne {
+    width: 100%;
+    max-width: 32rem;
+    margin: 1rem auto;
+    text-align: center; /* leggibilità migliore */
+  }
+
+  .review-header {
+    justify-content: flex-start;  /* su tablet puoi ancora allineare a sx */
+    padding: 0.5rem;
+  }
+
+  .user-info {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .rating {
+    text-align: left;
+  }
+}
+
+/* ========= Mobile (≤ 600px) ========= */
+@media (max-width: 600px) {
+  html {
+    font-size: 14px; 
+    background-image: url("/assets/image/bg-pattern-top-mobile.svg"),
+    url("/assets/image/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat, no-repeat;
+  background-position: left top, bottom right;
+  background-size: 220px, 220px;
+  }
+
+  body {
+    background-color: transparent;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 1.25rem 1rem 0.5rem 1rem;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0.5rem 1rem 1.25rem 1rem;
+    text-align: center;
+  }
+
+  .top {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .ratings {
+    width: 80%;
+    margin: 0;
+    align-items: center;
+  }
+
+  .rating-star-1,
+  .rating-star-2,
+  .rating-star-3 {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.9rem 0.75rem;
+    border-radius: 8px;
+  }
+
+  .reviews {
+    display: block;
+    width: 100%;
+    margin: 0.75rem 0;
+    padding: 0.75rem 0.75rem 1rem;
+  }
+
+  .review-header {
+    padding: 0;      /* più compatto su mobile */
+  }
+
+  .review-header img {
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  h2 {
+    font-size: 0.95em;
+    gap: 0.5rem;
+  }
+
+  h3 {
+    font-size: 0.85em;
+    margin-top: -0.25em;
+  }
+
+  .rating {
+    font-size: 0.95em;
+    text-align: left;
+    margin-top: 0.25em;
+  }
+
+  /* azzero gli offset speciali delle tre card */
+  .colton,
+  .irene,
+  .anne {
+    margin: 0.75rem 0;
+    width: 80%;
+    max-width: none;
+    align-items: center;
+  }
+
+}
+/* ========= Extra-small (≤ 360px) opzionale ========= */
+@media (max-width: 360px) {
+  h1 { font-size: 1.8rem; }
+  .description { font-size: 0.95rem; }
+  .review-header img { width: 2.2em; height: 2.2em; }
+}
+/* ===== Centramento "vero" su mobile ===== */
+@media (max-width: 600px) {
+  /* griglia superiore: centra tutto */
+
+
+
+  .top {
+    grid-template-columns: 1fr;
+    justify-items: center;   /* orizzontale */
+    align-items: center;     /* verticale */
+    place-items: center;     /* shorthand */
+    gap: 1rem;
+    padding: 0 1rem;
+    text-align: center;      /* fallback per testi */
+  }
+
+  /* blocco ratings: occupa tutta la riga e resta centrato */
+  .ratings {
+    width: 80%;
+    max-width: 36rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 0.75rem;
+    justify-items: center;
+  }
+
+  /* box stelle tutte centrali, senza offset laterali */
+  .rating-star-1,
+  .rating-star-2,
+  .rating-star-3 {
+    width: 80%;
+    max-width: 32rem;
+    margin: 0.5rem auto;     /* centra il box */
+    padding: 0.9rem 0.75rem;
+  }
+
+  /* card recensioni centrali e con contenuto centrato */
+  .reviews,
+  .colton,
+  .irene,
+  .anne {
+    display: block;
+    width: 80%;
+    max-width: 32rem;
+    margin: 0.75rem auto;    /* centra la card */
+    text-align: left;        /* testo della recensione leggibile */
+  }
+
+  /* header della recensione (avatar + nomi) centrato */
+  .review-header {
+    padding: 0;
+    justify-content: left; /* centra riga */
+    margin-left: 1em;
+  }
+
+  /* avatar senza pad e proporzionato */
+  .review-header img {
+    width: 2.6em;
+    height: 2.6em;
+    padding: 0;
+    margin-left: 0;
+  }
+
+  /* centro i nomi e il ruolo sotto l’avatar */
+  .user-info {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* centro il testo "rating" sotto */
+  .rating {
+    display: block;
+    float: none;
+    margin: 0.25rem auto 0 1em;
+    text-align: left;
+
+  }
+
+  /* titoli h1/descrizione già centrati, ribadisco per sicurezza */
+  h1, .description, h2, h3 { text-align: center; }
+}
+
+/* Contenitore centrato ovunque (se non l'hai già) */
+main {
+  max-width: 1100px;
+  margin-inline: auto; /* centra il wrapper */
+}
+
+/* ===== Fascia 1000px → 801px: centra davvero tutto ===== */
+@media (max-width: 1200px) and (min-width: 800px) {
+  /* Stack soft e centrato */
+  .top {
+    grid-template-columns: 1fr;     /* da 2 col → 1 col */
+    justify-items: center;          /* centra le card */
+    align-items: start;
+    gap: 1.25rem;
+    padding: 0 2rem;
+    text-align: center;             /* testi centrati dove serve */
+  }
+
+  /* blocco delle stelle centrato e con larghezza massima */
+  .ratings {
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 0.75rem;
+    justify-items: center;
+  }
+
+  /* ogni box “rating-star” centrato senza offset */
+  .rating-star-1,
+  .rating-star-2,
+  .rating-star-3 {
+    width: 100%;
+    max-width: 34rem;
+    margin: 0.75rem auto;           /* centra il box */
+    padding: 1rem;
+  }
+
+  /* card recensioni centrali e senza posizionamenti speciali */
+  .reviews,
+  .colton,
+  .irene,
+  .anne {
+    display: block;                  /* niente inline-block */
+    width: 100%;
+    max-width: 34rem;
+    margin: 1rem auto;               /* centra la card */
+    position: static;                /* rimuove top/relative */
+    top: auto;
+  }
+
+  
+  /* header recensione in riga ma centrato */
+  .review-header {
+    justify-content: center;
+    padding: 0;
+  }
+
+  /* testo interno: leggermente verso sinistra per leggibilità */
+  .user-info { align-items: center; text-align: center; }
+  .rating    { text-align: center; margin: 0.25rem 0 0; }
+}

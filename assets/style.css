@@ -3,8 +3,8 @@
 /* ========= Base (desktop-first, ma con fix utili ovunque) ========= */
 body {
   background-image:
-    url("assets/image/bg-pattern-top-desktop.svg"),
-    url("assets/image/bg-pattern-bottom-desktop.svg");
+    url("./assets/image/bg-pattern-top-desktop.svg"),
+    url("./assets/image/bg-pattern-bottom-desktop.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: left top, calc(100% - 50px) calc(100% + 100px);
   font-size: 15px;
@@ -208,8 +208,8 @@ h3 {
     font-size: 14px;
     background-position: left -60px top -60px, right -60px bottom -60px;
     background-size: 260px, 260px;
-    background-image: url("assets/image/bg-pattern-top-mobile.svg"),
-    url("assets/image/bg-pattern-bottom-mobile.svg");
+    background-image: url("./assets/image/bg-pattern-top-mobile.svg"),
+    url("./assets/image/bg-pattern-bottom-mobile.svg");
   }
 
   h1 {
@@ -277,8 +277,8 @@ h3 {
 @media (max-width: 600px) {
   html {
     font-size: 14px; 
-    background-image: url("assets/image/bg-pattern-top-mobile.svg"),
-    url("assets/image/bg-pattern-bottom-mobile.svg");
+    background-image: url("/.assets/image/bg-pattern-top-mobile.svg"),
+    url("./assets/image/bg-pattern-bottom-mobile.svg");
     background-repeat: no-repeat, no-repeat;
   background-position: left top, bottom right;
   background-size: 220px, 220px;

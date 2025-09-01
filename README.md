@@ -5,7 +5,7 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 
 ## 📸 Screenshot
 
-![Screenshot of the project](./assets/image/screenshot-desktop.png)
+![Screenshot of the project](https://github.com/SaraPrioriello/social-proof-section/blob/main/assets/image/Screenshot%202025-09-01%20172524.png?raw=true)
 
 ## 🔗 Links
 
